@@ -1,8 +1,19 @@
 BNCSUtil/build/
 BNCSUtil/dist/
+BNCSUtil/nbproject/*.mk
+BNCSUtil/nbproject/*.pro
+BNCSUtil/nbproject/*.bash
+BNCSUtil/nbproject/project.properties
 
 GProxy/build/
 GProxy/dist/
 GProxy/nbproject/private/
+GProxy/nbproject/*.mk
+GProxy/nbproject/*.pro
+GProxy/nbproject/*.bash
+GProxy/nbproject/project.properties
 GProxy/source/Debug/
 GProxy/source/Release/
+GProxy/source/moc_*
+GProxy/source/qrc_*
+GProxy/source/ui_*

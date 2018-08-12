@@ -21,4 +21,4 @@ QMAKE_CC = gcc
 QMAKE_CXX = g++
 DEFINES += 
 INCLUDEPATH += source . ../BNCSUtil/src 
-LIBS += source/ms_sdk/version.lib source/ms_sdk/ws2_32.lib -L../BNCSUtil/dist/Debug/Qt_MinGW-Windows ../BNCSUtil/dist/Debug/Qt_MinGW-Windows/BNCSUtil.dll  
+LIBS += source/ms_sdk/version.lib source/ms_sdk/ws2_32.lib -L../BNCSUtil/dist/Release/MinGW_1-Windows ../BNCSUtil/dist/Release/MinGW_1-Windows/BNCSUtil.dll  

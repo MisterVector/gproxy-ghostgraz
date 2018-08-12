@@ -168,7 +168,7 @@
           <linkerLibItems>
             <linkerLibFileItem>source/ms_sdk/version.lib</linkerLibFileItem>
             <linkerLibFileItem>source/ms_sdk/ws2_32.lib</linkerLibFileItem>
-            <linkerLibFileItem>../BNCSUtil/dist/Debug/Qt_MinGW-Windows/BNCSUtil.dll</linkerLibFileItem>
+            <linkerLibFileItem>../BNCSUtil/dist/Release/MinGW_1-Windows/BNCSUtil.dll</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <requiredProjects>
