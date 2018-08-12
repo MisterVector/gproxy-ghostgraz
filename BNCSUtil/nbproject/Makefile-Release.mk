@@ -14,15 +14,16 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=mingw32-gcc.exe
-CCC=mingw32-g++.exe
-CXX=mingw32-g++.exe
+CC=gcc
+CCC=g++
+CXX=g++
 FC=gfortran
-AS=as.exe
-QMAKE=qmake.exe
+AS=as
+QMAKE=qmake
 
 # Macros
-CND_PLATFORM=Qt_MinGW-Windows
+CND_PLATFORM=MinGW_1-Windows
+CND_DLIB_EXT=dll
 CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -66,14 +67,14 @@ FORCE:
 	"${MAKE}" -f nbproject/qt-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/BNCSUtil.dll
 
 ${CND_BUILDDIR}/Release/%.o: nbproject/qt-${CND_CONF}.mk
-	$(MAKE) -f nbproject/qt-${CND_CONF}.mk "$@"
+	${MAKE} -f nbproject/qt-${CND_CONF}.mk "$@"
 
 # Subprojects
 .build-subprojects:
 
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS} nbproject/qt-${CND_CONF}.mk
-	$(MAKE) -f nbproject/qt-${CND_CONF}.mk distclean
+	${MAKE} -f nbproject/qt-${CND_CONF}.mk distclean
 
 # Subprojects
 .clean-subprojects:

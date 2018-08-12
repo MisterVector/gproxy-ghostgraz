@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="79">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -65,8 +65,9 @@
   <confs>
     <conf name="Debug" type="5">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>Qt_MinGW|MinGW</compilerSet>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <qt>
         <version></version>
@@ -85,11 +86,70 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="src/bncsutil/bncsutil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/bsha1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/bsha1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/buffer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/cdkeydecoder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/cdkeydecoder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/checkrevision.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/checkrevision.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/decodekey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/decodekey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/file.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/file.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/gmp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/keytables.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/libinfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/libinfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/ms_stdint.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/mutil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/mutil_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/nls.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/bncsutil/nls.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/oldauth.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/oldauth.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/pe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/bncsutil/pe.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/sha1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/bncsutil/sha1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/stack.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/bncsutil/stack.h" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="5">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>Qt_MinGW|MinGW</compilerSet>
+        <compilerSet>MinGW_1|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <qt>
         <version></version>
@@ -128,8 +188,78 @@
                             perm="644"
                             owner="root"
                             group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}lib/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}lib/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
         </packFileList>
       </packaging>
+      <item path="src/bncsutil/bncsutil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/bsha1.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/bsha1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/buffer.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/cdkeydecoder.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/cdkeydecoder.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/checkrevision.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/checkrevision.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/decodekey.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/decodekey.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/file.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/file.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/gmp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/keytables.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/libinfo.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/libinfo.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/ms_stdint.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/mutil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/mutil_types.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/nls.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/bncsutil/nls.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/oldauth.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/bncsutil/oldauth.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/pe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/bncsutil/pe.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/sha1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/bncsutil/sha1.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/bncsutil/stack.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="src/bncsutil/stack.h" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

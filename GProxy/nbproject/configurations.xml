@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="79">
+<configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -119,8 +119,9 @@
   <confs>
     <conf name="Debug" type="4">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>Qt_MinGW|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <qt>
         <destdir>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}</destdir>
@@ -183,18 +184,183 @@
           </makeArtifact>
         </requiredProjects>
       </compileType>
+      <item path="source/Config.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/Config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/ConfigGUI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/ConfigGUI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/ConfigGUI.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/GameListDownloader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/GameListDownloader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/GhostGrazLogininformationDialog.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/GhostGrazLogininformationDialog.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/GhostGrazLogininformationDialog.ui"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/MainGUI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/MainGUI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/MainGUI.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Statspage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/Statspage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/bncsutilinterface.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/bncsutilinterface.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/bnet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/bnet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/bnetprotocol.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/bnetprotocol.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/commandpacket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/commandpacket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/ColoredMessage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/ColoredMessage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/Friend.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/Friend.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/GameListEntry.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/GameListEntry.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/Player.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/Product.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/Product.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/Slot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/Slot.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/delegate/ChannellistDelegate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/delegate/ChannellistDelegate.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/delegate/GamelistDelegate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/delegate/GamelistDelegate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gameprotocol.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/gameprotocol.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gproxy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/gproxy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gpsprotocol.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/gpsprotocol.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/resources.qrc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/socket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/socket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/thread/GproxyUpdateThread.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/thread/GproxyUpdateThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/thread/SleepThread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/thread/SleepThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/util/ColorUtil.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/util/ColorUtil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/util/Util.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/util/Util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/util/VariantUtil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/widget/ClickableLineEdit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/widget/ClickableLineEdit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/widget/ClickableListWidget.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/widget/ClickableListWidget.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/widget/MButton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/widget/MButton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/widget/MColorDialog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/widget/MColorDialog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/widget/MTextEdit.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/widget/MTextEdit.h" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="4">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
-        <compilerSet>Qt_MinGW|MinGW</compilerSet>
+        <compilerSet>MinGW|MinGW</compilerSet>
+        <dependencyChecking>true</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <qt>
         <destdir>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}</destdir>
         <target>GProxy</target>
         <version>2.3.2</version>
         <buildMode>1</buildMode>
-        <modules>core gui network</modules>
+        <modules>core gui widgets network opengl</modules>
         <mocDir>source</mocDir>
         <rccDir>source</rccDir>
         <uiDir>source</uiDir>
@@ -264,7 +430,7 @@
           <linkerLibItems>
             <linkerLibFileItem>source/ms_sdk/version.lib</linkerLibFileItem>
             <linkerLibFileItem>source/ms_sdk/ws2_32.lib</linkerLibFileItem>
-            <linkerLibFileItem>../BNCSUtil/dist/Release/Qt_MinGW-Windows/BNCSUtil.dll</linkerLibFileItem>
+            <linkerLibFileItem>../BNCSUtil/dist/Release/MinGW_1-Windows/BNCSUtil.dll</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <requiredProjects>
@@ -280,6 +446,170 @@
           </makeArtifact>
         </requiredProjects>
       </compileType>
+      <item path="source/Config.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/Config.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/ConfigGUI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/ConfigGUI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/ConfigGUI.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/GameListDownloader.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/GameListDownloader.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/GhostGrazLogininformationDialog.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/GhostGrazLogininformationDialog.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/GhostGrazLogininformationDialog.ui"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/MainGUI.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/MainGUI.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/MainGUI.ui" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/Statspage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/Statspage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/bncsutilinterface.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/bncsutilinterface.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/bnet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/bnet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/bnetprotocol.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/bnetprotocol.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/commandpacket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/commandpacket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/ColoredMessage.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/ColoredMessage.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/Friend.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/Friend.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/GameListEntry.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/GameListEntry.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/Player.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/Player.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/Product.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/Product.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/data/Slot.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/data/Slot.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/delegate/ChannellistDelegate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/delegate/ChannellistDelegate.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/delegate/GamelistDelegate.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/delegate/GamelistDelegate.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gameprotocol.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/gameprotocol.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gproxy.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/gproxy.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/gpsprotocol.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/gpsprotocol.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/resources.qrc" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/socket.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/socket.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/thread/GproxyUpdateThread.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/thread/GproxyUpdateThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/thread/SleepThread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/thread/SleepThread.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/util/ColorUtil.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/util/ColorUtil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/util/Util.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/util/Util.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/util/VariantUtil.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/widget/ClickableLineEdit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/widget/ClickableLineEdit.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/widget/ClickableListWidget.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="source/widget/ClickableListWidget.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="source/widget/MButton.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/widget/MButton.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/widget/MColorDialog.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/widget/MColorDialog.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="source/widget/MTextEdit.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="source/widget/MTextEdit.h" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

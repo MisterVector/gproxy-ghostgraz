@@ -1,4 +1,4 @@
-#include "data/Slot.h"
+#include "Slot.h"
 
 Slot::Slot () { }
 

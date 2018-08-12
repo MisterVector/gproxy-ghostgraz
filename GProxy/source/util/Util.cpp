@@ -16,7 +16,7 @@
 
 */
 
-#include "util/Util.h"
+#include "Util.h"
 
 #include <sys/stat.h>
 #include <QByteArray>
@@ -494,7 +494,7 @@ QColor Util::toColor (const QString& colorString)
     QRegExp colorCodeRegExp = QRegExp("\\|c([a-f]|[0-9]){8}");
     colorCodeRegExp.setCaseSensitivity(Qt::CaseInsensitive);
 
-    bool* ok = false; // Will be assigned true if the conversation was successful. False otherwise.
+    bool* ok; // Will be assigned true if the conversation was successful. False otherwise.
     int alpha, red, green, blue; // Color values.
 
     if (colorString.indexOf(colorCodeRegExp) == 0)

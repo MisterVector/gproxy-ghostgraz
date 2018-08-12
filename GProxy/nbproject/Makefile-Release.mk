@@ -14,15 +14,16 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc.exe
-CCC=g++.exe
-CXX=g++.exe
+CC=gcc
+CCC=g++
+CXX=g++
 FC=gfortran
-AS=as.exe
-QMAKE=qmake.exe
+AS=as
+QMAKE=qmake
 
 # Macros
-CND_PLATFORM=Qt_MinGW-Windows
+CND_PLATFORM=MinGW-Windows
+CND_DLIB_EXT=dll
 CND_CONF=Release
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -51,7 +52,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-Lsource/gmp/lib -Lsource/ms_sdk -Lsource/mysql/lib -Lsource/pdcurses source/ms_sdk/version.lib source/ms_sdk/ws2_32.lib ../BNCSUtil/dist/Release/Qt_MinGW-Windows/BNCSUtil.dll
+LDLIBSOPTIONS=-Lsource/gmp/lib -Lsource/ms_sdk -Lsource/mysql/lib -Lsource/pdcurses source/ms_sdk/version.lib source/ms_sdk/ws2_32.lib ../BNCSUtil/dist/Release/MinGW_1-Windows/BNCSUtil.dll
 
 nbproject/qt-${CND_CONF}.mk: nbproject/qt-${CND_CONF}.pro FORCE
 	${QMAKE} VPATH=. -spec win32-g++ -o qttmp-${CND_CONF}.mk nbproject/qt-${CND_CONF}.pro

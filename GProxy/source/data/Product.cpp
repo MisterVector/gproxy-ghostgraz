@@ -1,4 +1,4 @@
-#include "data/Product.h"
+#include "Product.h"
 
 Product::Product () { }
 

@@ -1,4 +1,4 @@
-#include "widget/ClickableLineEdit.h"
+#include "ClickableLineEdit.h"
 
 ClickableLineEdit::ClickableLineEdit (QWidget *parent) : QLineEdit (parent) { }
 

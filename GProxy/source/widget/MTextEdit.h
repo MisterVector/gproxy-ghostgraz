@@ -1,7 +1,7 @@
 #ifndef MTEXTEDIT_H
 #define	MTEXTEDIT_H
 
-#include "gproxy.h"
+#include "..\gproxy.h"
 
 #include <QTextEdit>
 #include <QScrollBar>

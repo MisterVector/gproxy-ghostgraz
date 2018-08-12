@@ -1,4 +1,4 @@
-#include "thread/GproxyUpdateThread.h"
+#include "GproxyUpdateThread.h"
 
 GproxyUpdateThread::GproxyUpdateThread (CGProxy *p_gproxy)
 {

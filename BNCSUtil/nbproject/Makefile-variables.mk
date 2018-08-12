@@ -7,21 +7,21 @@ CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
 # Debug configuration
-CND_PLATFORM_Debug=Qt_MinGW-Windows
-CND_ARTIFACT_DIR_Debug=dist/Debug/Qt_MinGW-Windows
+CND_PLATFORM_Debug=MinGW-Windows
+CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW-Windows
 CND_ARTIFACT_NAME_Debug=BNCSUtil.dll
-CND_ARTIFACT_PATH_Debug=dist/Debug/Qt_MinGW-Windows/BNCSUtil.dll
-CND_PACKAGE_DIR_Debug=dist/Debug/Qt_MinGW-Windows/package
+CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW-Windows/BNCSUtil.dll
+CND_PACKAGE_DIR_Debug=dist/Debug/MinGW-Windows/package
 CND_PACKAGE_NAME_Debug=BNCSUtil.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/Qt_MinGW-Windows/package/BNCSUtil.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/MinGW-Windows/package/BNCSUtil.tar
 # Release configuration
-CND_PLATFORM_Release=Qt_MinGW-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/Qt_MinGW-Windows
+CND_PLATFORM_Release=MinGW_1-Windows
+CND_ARTIFACT_DIR_Release=dist/Release/MinGW_1-Windows
 CND_ARTIFACT_NAME_Release=BNCSUtil.dll
-CND_ARTIFACT_PATH_Release=dist/Release/Qt_MinGW-Windows/BNCSUtil.dll
-CND_PACKAGE_DIR_Release=dist/Release/Qt_MinGW-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW_1-Windows/BNCSUtil.dll
+CND_PACKAGE_DIR_Release=dist/Release/MinGW_1-Windows/package
 CND_PACKAGE_NAME_Release=BNCSUtil.tar
-CND_PACKAGE_PATH_Release=dist/Release/Qt_MinGW-Windows/package/BNCSUtil.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW_1-Windows/package/BNCSUtil.tar
 #
 # include compiler specific variables
 #

@@ -1,4 +1,4 @@
-#include "delegate/GamelistDelegate.h"
+#include "GamelistDelegate.h"
 
 void GamelistDelegate::paint (QPainter * painter,
         const QStyleOptionViewItem & option, const QModelIndex & index)

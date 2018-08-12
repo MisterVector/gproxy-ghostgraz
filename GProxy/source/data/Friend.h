@@ -1,7 +1,7 @@
 #ifndef FRIEND_H
 #define	FRIEND_H
 
-#include "data/Product.h"
+#include "Product.h"
 
 #include <QObject>
 #include <QMetaType>

@@ -1,7 +1,7 @@
 #ifndef COLORUTIL_H
 #define	COLORUTIL_H
 
-#include "data/ColoredMessage.h"
+#include "..\data\ColoredMessage.h"
 
 class ColorUtil
 {

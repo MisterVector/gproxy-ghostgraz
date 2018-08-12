@@ -1,0 +1,8 @@
+BNCSUtil/build/
+BNCSUtil/dist/
+
+GProxy/build/
+GProxy/dist/
+GProxy/nbproject/private/
+GProxy/source/Debug/
+GProxy/source/Release/

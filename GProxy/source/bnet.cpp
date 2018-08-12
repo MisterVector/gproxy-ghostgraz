@@ -769,7 +769,7 @@ void CBNET::ProcessChatEvent (CIncomingChatEvent * chatEvent)
                 }
                 case 3:
                 {
-                    QByteArray ba = statStringList.at(i).toAscii();
+                    QByteArray ba = statStringList.at(i).toLocal8Bit();
                     char *d = ba.data();
                     std::reverse(d, d + statStringList.at(i).length());
                     clanTag = QString(d);

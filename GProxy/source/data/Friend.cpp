@@ -1,4 +1,4 @@
-#include "data/Friend.h"
+#include "Friend.h"
 
 Friend::Friend ()
 {

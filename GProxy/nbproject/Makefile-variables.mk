@@ -15,13 +15,13 @@ CND_PACKAGE_DIR_Debug=dist/Debug/Qt_MinGW-Windows/package
 CND_PACKAGE_NAME_Debug=GProxy.tar
 CND_PACKAGE_PATH_Debug=dist/Debug/Qt_MinGW-Windows/package/GProxy.tar
 # Release configuration
-CND_PLATFORM_Release=Qt_MinGW-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/Qt_MinGW-Windows
+CND_PLATFORM_Release=MinGW-Windows
+CND_ARTIFACT_DIR_Release=dist/Release/MinGW-Windows
 CND_ARTIFACT_NAME_Release=GProxy
-CND_ARTIFACT_PATH_Release=dist/Release/Qt_MinGW-Windows/GProxy
-CND_PACKAGE_DIR_Release=dist/Release/Qt_MinGW-Windows/package
+CND_ARTIFACT_PATH_Release=dist/Release/MinGW-Windows/GProxy
+CND_PACKAGE_DIR_Release=dist/Release/MinGW-Windows/package
 CND_PACKAGE_NAME_Release=GProxy.tar
-CND_PACKAGE_PATH_Release=dist/Release/Qt_MinGW-Windows/package/GProxy.tar
+CND_PACKAGE_PATH_Release=dist/Release/MinGW-Windows/package/GProxy.tar
 #
 # include compiler specific variables
 #
