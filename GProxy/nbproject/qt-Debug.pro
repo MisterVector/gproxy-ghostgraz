@@ -1,7 +1,7 @@
 # This file is generated automatically. Do not edit.
 # Use project properties -> Build -> Qt -> Expert -> Custom Definitions.
 TEMPLATE = app
-DESTDIR = dist/Debug/Qt_MinGW-Windows
+DESTDIR = dist/Debug/MinGW-Windows
 TARGET = GProxy
 VERSION = 2.0.0
 CONFIG -= debug_and_release app_bundle lib_bundle
@@ -13,7 +13,7 @@ HEADERS += source/Config.h source/ConfigGUI.h source/GameListDownloader.h source
 FORMS += source/ConfigGUI.ui source/GhostGrazLogininformationDialog.ui source/MainGUI.ui
 RESOURCES += source/resources.qrc
 TRANSLATIONS +=
-OBJECTS_DIR = build/Debug/Qt_MinGW-Windows
+OBJECTS_DIR = build/Debug/MinGW-Windows
 MOC_DIR = source
 RCC_DIR = source
 UI_DIR = source
