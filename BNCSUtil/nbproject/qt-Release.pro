@@ -1,7 +1,7 @@
 # This file is generated automatically. Do not edit.
 # Use project properties -> Build -> Qt -> Expert -> Custom Definitions.
 TEMPLATE = lib
-DESTDIR = dist/Release/MinGW_1-Windows
+DESTDIR = dist/Release/MinGW-Windows
 TARGET = BNCSUtil
 VERSION = 
 CONFIG -= debug_and_release app_bundle lib_bundle
@@ -13,7 +13,7 @@ HEADERS += src/bncsutil/bncsutil.h src/bncsutil/bsha1.h src/bncsutil/buffer.h sr
 FORMS +=
 RESOURCES +=
 TRANSLATIONS +=
-OBJECTS_DIR = build/Release/MinGW_1-Windows
+OBJECTS_DIR = build/Release/MinGW-Windows
 MOC_DIR = 
 RCC_DIR = 
 UI_DIR = 
