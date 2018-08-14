@@ -1501,7 +1501,7 @@ void CGProxy::ProcessLocalPackets ()
                     string NameString = string(Name.begin(), Name.end());
                     BYTEARRAY Remainder = BYTEARRAY(Data.begin() + Name.size() + 20, Data.end());
 
-                    if (Remainder.size() == 18)
+                    if(( Remainder.size( ) == 18 && config->getInt("war3version") <= 28 )||( Remainder.size( ) == 19 && config->getInt("war3version") >= 29 ))
                     {
                         // lookup the game in the main list
 

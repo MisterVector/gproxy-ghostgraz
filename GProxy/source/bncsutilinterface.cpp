@@ -43,59 +43,97 @@ void CBNCSUtilInterface :: Reset( string userName, string userPassword )
 	m_NLS = new NLS( userName, userPassword );
 }
 
-bool CBNCSUtilInterface :: HELP_SID_AUTH_CHECK( bool TFT, string war3Path, string keyROC, string keyTFT, string valueStringFormula, string mpqFileName, BYTEARRAY clientToken, BYTEARRAY serverToken )
+bool CBNCSUtilInterface :: HELP_SID_AUTH_CHECK( bool TFT, uint32_t war3Version, string war3Path, string keyROC, string keyTFT, string valueStringFormula, string mpqFileName, BYTEARRAY clientToken, BYTEARRAY serverToken )
 {
 	// set m_EXEVersion, m_EXEVersionHash, m_EXEInfo, m_InfoROC, m_InfoTFT
 
-	string FileWar3EXE = war3Path + "war3.exe";
-	string FileStormDLL = war3Path + "Storm.dll";
+	string FileWar3EXE = war3Path + "Warcraft III.exe";
 
-	if( !Util::fileExists( FileStormDLL ) )
-		FileStormDLL = war3Path + "storm.dll";
+	if( !Util::fileExists( FileWar3EXE ) )
+		FileWar3EXE = war3Path + "warcraft.exe";
 
-	string FileGameDLL = war3Path + "game.dll";
-	bool ExistsWar3EXE = Util::fileExists( FileWar3EXE );
-	bool ExistsStormDLL = Util::fileExists( FileStormDLL );
-	bool ExistsGameDLL = Util::fileExists( FileGameDLL );
+	if( !Util::fileExists( FileWar3EXE ) )
+		FileWar3EXE = war3Path + "war3.exe";
 
-	if( ExistsWar3EXE && ExistsStormDLL && ExistsGameDLL )
+	if( !Util::fileExists( FileWar3EXE ) )
+		FileWar3EXE = war3Path + "Frozen Throne.exe";
+
+	bool MissingFile = false;
+
+	if( !Util::fileExists( FileWar3EXE ) ) 
 	{
-		// todotodo: check getExeInfo return value to ensure 1024 bytes was enough
+		CONSOLE_Print( "[BNCSUI] unable to open [" + QString::fromStdString(FileWar3EXE) + "]" );
+		MissingFile = true;
+	}
 
-		char buf[1024];
-		uint32_t EXEVersion;
-		getExeInfo( FileWar3EXE.c_str(), (char *)&buf, 1024, (uint32_t *)&EXEVersion, BNCSUTIL_PLATFORM_X86 );
-		m_EXEInfo = buf;
-		m_EXEVersion = Util::createByteArray( EXEVersion, false );
-		uint32_t EXEVersionHash;
-		checkRevisionFlat( valueStringFormula.c_str( ), FileWar3EXE.c_str( ), FileStormDLL.c_str( ), FileGameDLL.c_str( ), extractMPQNumber( mpqFileName.c_str( ) ), (unsigned long *)&EXEVersionHash );
-		m_EXEVersionHash = Util::createByteArray( EXEVersionHash, false );
-		m_KeyInfoROC = CreateKeyInfo( keyROC, Util::byteArrayToUInt32( clientToken, false ), Util::byteArrayToUInt32( serverToken, false ) );
+	string FileStormDLL, FileGameDLL;
 
-		if( TFT )
-			m_KeyInfoTFT = CreateKeyInfo( keyTFT, Util::byteArrayToUInt32( clientToken, false ), Util::byteArrayToUInt32( serverToken, false ) );
+	if( war3Version <= 28 )
+	{
+		FileStormDLL = war3Path + "Storm.dll";
 
-		if( m_KeyInfoROC.size( ) == 36 && ( !TFT || m_KeyInfoTFT.size( ) == 36 ) )
-			return true;
-		else
+		if( !Util::fileExists( FileStormDLL ) )
+			FileStormDLL = war3Path + "storm.dll";
+
+		FileGameDLL = war3Path + "Game.dll";
+
+		if( !Util::fileExists( FileGameDLL ) )
 		{
-			if( m_KeyInfoROC.size( ) != 36 )
-				CONSOLE_Print( ColoredMessage("[BNCSUI] unable to create ROC key info - invalid ROC key" , ColoredMessage::ERROR));
-
-			if( TFT && m_KeyInfoTFT.size( ) != 36 )
-				CONSOLE_Print( ColoredMessage("[BNCSUI] unable to create TFT key info - invalid TFT key" , ColoredMessage::ERROR));
+			FileGameDLL = war3Path + "game.dll";
 		}
+
+		if( !Util::fileExists( FileStormDLL ) )
+		{
+			CONSOLE_Print( "[BNCSUI] unable to open [" + QString::fromStdString(FileStormDLL) + "]" );
+			MissingFile = true;
+		}
+
+		if( !Util::fileExists( FileGameDLL ) )
+		{
+			CONSOLE_Print( "[BNCSUI] unable to open [" + QString::fromStdString(FileGameDLL) + "]" );
+			MissingFile = true;
+		}
+	}
+
+	if( MissingFile )
+		return false;
+
+	//todotodo: check getEXEInfo return value to ensure 1024 bytes was enough
+
+	char buf[1024];
+	uint32_t EXEVersion;
+	getExeInfo( FileWar3EXE.c_str( ), (char *)&buf, 1024, (uint32_t *)&EXEVersion, BNCSUTIL_PLATFORM_X86 );
+	m_EXEInfo = buf;
+	m_EXEVersion = Util::createByteArray( EXEVersion, false );
+	unsigned long EXEVersionHash;
+
+	// for war3version <= 28, we use war3.exe, storm.dll, and game.dll
+	// for war3version >= 29, we use Warcraft III.exe only
+	if( war3Version <= 28 )
+	{
+		checkRevisionFlat( valueStringFormula.c_str( ), FileWar3EXE.c_str( ), FileStormDLL.c_str( ), FileGameDLL.c_str( ), extractMPQNumber( mpqFileName.c_str( ) ), (unsigned long *)&EXEVersionHash );
 	}
 	else
 	{
-		if( !ExistsWar3EXE )
-			CONSOLE_Print( "[BNCSUI] unable to open [" + QString::fromStdString(FileWar3EXE) + "]" );
+		const char* files[] = { FileWar3EXE.c_str( ) };
+		checkRevision( valueStringFormula.c_str( ), files, 1, extractMPQNumber( mpqFileName.c_str( ) ), (unsigned long *)&EXEVersionHash );
+	}
 
-		if( !ExistsStormDLL )
-			CONSOLE_Print( "[BNCSUI] unable to open [" + QString::fromStdString(FileStormDLL) + "]" );
+	m_EXEVersionHash = Util::createByteArray( (uint32_t) EXEVersionHash, false );
+	m_KeyInfoROC = CreateKeyInfo( keyROC, Util::byteArrayToUInt32( clientToken, false ), Util::byteArrayToUInt32( serverToken, false ) );
+	
+	if( TFT )
+		m_KeyInfoTFT = CreateKeyInfo( keyTFT, Util::byteArrayToUInt32( clientToken, false ), Util::byteArrayToUInt32( serverToken, false ) );
+			
+	if( m_KeyInfoROC.size( ) == 36 && ( !TFT || m_KeyInfoTFT.size( ) == 36 ) )
+		return true;
+	else
+	{
+		if( m_KeyInfoROC.size( ) != 36 )
+			CONSOLE_Print( ColoredMessage("[BNCSUI] unable to create ROC key info - invalid ROC key" , ColoredMessage::ERROR));
 
-		if( !ExistsGameDLL )
-			CONSOLE_Print( "[BNCSUI] unable to open [" + QString::fromStdString(FileGameDLL) + "]" );
+		if( TFT && m_KeyInfoTFT.size( ) != 36 )
+			CONSOLE_Print( ColoredMessage("[BNCSUI] unable to create TFT key info - invalid TFT key" , ColoredMessage::ERROR));
 	}
 
 	return false;
