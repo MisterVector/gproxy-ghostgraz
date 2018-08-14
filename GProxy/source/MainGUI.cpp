@@ -1341,29 +1341,42 @@ void MainGUI::setGameslots (QList<Slot*> slotList)
         widget.channelList->addItem(playerItem);
     }
 }
-
+#ifdef WIN32
 /**
  * Starts Warcraft 3 Reign of Chaos or The Frozen Throne (depending on the configuration) as detached process.
  */
 void MainGUI::startWarcraft ()
 {
-    QString exePath;
-
-    if (!gproxy->getCDKeyTFT().isEmpty())
+    STARTUPINFO si;
+    PROCESS_INFORMATION pi;
+    ZeroMemory( &si, sizeof( si ) );
+    si.cb = sizeof( si );
+    ZeroMemory( &pi, sizeof( pi ) );
+    QString exePath = gproxy->getWar3Path();
+    std::string exePathStr = exePath.toUtf8().constData();
+    std::cout << exePathStr;
+    string War3EXE;
+    
+    
+    War3EXE = exePathStr + "Warcraft III.exe";
+    BOOL hProcess = CreateProcessA( War3EXE.c_str( ), NULL, NULL, NULL, FALSE, NORMAL_PRIORITY_CLASS, NULL, exePathStr.c_str( ), LPSTARTUPINFOA( &si ), &pi );
+    
+    if( !hProcess )
     {
-        exePath = gproxy->getWar3Path() + "Frozen Throne.exe";
-    }
-    else
+        War3EXE = exePathStr + "war3.exe";
+        BOOL hProcess = CreateProcessA( War3EXE.c_str( ), NULL, NULL, NULL, FALSE, NORMAL_PRIORITY_CLASS, NULL, exePathStr.c_str( ), LPSTARTUPINFOA( &si ), &pi );
+    }  else if( !hProcess )
     {
-        exePath = gproxy->getWar3Path() + "Warcraft III.exe";
-    }
-
-    if( !QProcess::startDetached(exePath, QStringList()) )
+        War3EXE = exePathStr + "warcraft.exe";
+        BOOL hProcess = CreateProcessA( War3EXE.c_str( ), NULL, NULL, NULL, FALSE, NORMAL_PRIORITY_CLASS, NULL, exePathStr.c_str( ), LPSTARTUPINFOA( &si ), &pi );
+    }  else
     {
-        showErrorMessage("Could not start " + exePath + ".\nPlease check your file permissions.");
+        CONSOLE_Print( QString::fromStdString( "[GPROXY] started Warcraft 3" ) );
+        CloseHandle( pi.hProcess );
+        CloseHandle( pi.hThread );
     }
 }
-
+#endif
 /**
  * Displays a errormessage dialog.
  *
