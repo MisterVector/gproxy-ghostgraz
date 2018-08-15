@@ -1,6 +1,6 @@
 # GProxy fork
 
-This is a fork of ghostgraz' GProxy, updated for Warcraft III 1.29+ support. Download the latest release from the releases page here: https://github.com/MisterVector/gproxy-ghostgraz/releases
+This is a fork of GProxy for ghostgraz, updated for Warcraft III 1.29+ support. Download the latest release from the releases page here: https://github.com/MisterVector/gproxy-ghostgraz/releases
 
 Special thanks goes to Unitil for the Warcraft III 1.29+ support and Hoogies for his help as well as motivating me to do this project.
 
