@@ -1,5 +1,6 @@
 BNCSUtil/build/
 BNCSUtil/dist/
+BNCSUtil/nbproject/private/
 BNCSUtil/nbproject/*.mk
 BNCSUtil/nbproject/*.pro
 BNCSUtil/nbproject/*.bash
