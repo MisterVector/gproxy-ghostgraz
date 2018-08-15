@@ -1,8 +1,8 @@
 # GProxy fork
 
-This is a fork of ghostgraz' GProxy, updated for Warcraft III 1.30+ support. Download the latest release from the releases page here: 
+This is a fork of ghostgraz' GProxy, updated for Warcraft III 1.29+ support. Download the latest release from the releases page here: https://github.com/MisterVector/gproxy-ghostgraz/releases
 
-Special thanks goes to Unitil for his help and Warcraft III 1.30+ support and Hoogies for his help as well as motivating me to do this project.
+Special thanks goes to Unitil for the Warcraft III 1.29+ support and Hoogies for his help as well as motivating me to do this project.
 
 # Building from source
 
@@ -17,7 +17,7 @@ It's important to save the Netbeans step for last. MinGW, MSYS and Qt 4.8.5 need
 
 First off, download MinGW and MSYS 1.0. I have provided a bundle with MinGW 4.4 and MSYS 1.0 here: http://files.codespeak.org/downloads/MinGW_MSYS.zip
 
-When you have downloaded this, extract the contents to C:\.
+When you have downloaded this, extract the contents to C:\\.
 
 Next, download Qt 4.8.5 here: https://download.qt.io/archive/qt/4.8/4.8.5/qt-win-opensource-4.8.5-mingw.exe
 
