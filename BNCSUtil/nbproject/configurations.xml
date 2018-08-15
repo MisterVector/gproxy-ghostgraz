@@ -212,6 +212,12 @@
                             perm="644"
                             owner="root"
                             group="bin"/>
+          <packFileListElem type="File"
+                            to="${PACKAGE_TOP_DIR}lib/${OUTPUT_BASENAME}"
+                            from="${OUTPUT_PATH}"
+                            perm="644"
+                            owner="root"
+                            group="bin"/>
         </packFileList>
       </packaging>
       <item path="src/bncsutil/bncsutil.h" ex="false" tool="3" flavor2="0">
