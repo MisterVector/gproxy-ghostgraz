@@ -15,7 +15,7 @@ In order to build GProxy from source, you need to download a few dependencies:
 
 It's important to save the NetBeans step for last. MinGW, MSYS and Qt 4.8.5 need to be fully installed first.
 
-First off, download MinGW and MSYS 1.0. I have provided a bundle with MinGW 4.4 and MSYS 1.0 here: http://files.codespeak.org/downloads/MinGW_MSYS.zip
+First off, download MinGW and MSYS 1.0. I have provided a bundle with MinGW 4.4 and MSYS 1.0 here: https://files.codespeak.org/downloads/MinGW_MSYS.zip
 
 When you have downloaded this, extract the contents to C:\\.
 
